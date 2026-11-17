@@ -1,0 +1,133 @@
+{
+  "ordinary_map": {
+    "prior_occupied": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "cells": [
+      0,
+      1
+    ],
+    "reading": 1
+  },
+  "graph": {
+    "vertices": 3,
+    "edges": [
+      {
+        "id": "fast",
+        "u": 0,
+        "v": 2,
+        "cost": 1,
+        "cells": [
+          0
+        ]
+      },
+      {
+        "id": "safe_a",
+        "u": 0,
+        "v": 1,
+        "cost": 1,
+        "cells": []
+      },
+      {
+        "id": "safe_b",
+        "u": 1,
+        "v": 2,
+        "cost": 2,
+        "cells": []
+      }
+    ]
+  },
+  "coupling": {
+    "before_reading": 2,
+    "after_reading": 1,
+    "threshold": 0.8,
+    "start": 0,
+    "goal": 2,
+    "prior": {
+      "n": 2,
+      "class_weights": [
+        1.0
+      ],
+      "occupied": [
+        [
+          0.5,
+          0.5
+        ]
+      ],
+      "pair_factors": []
+    },
+    "ray": {
+      "cells": [
+        0,
+        1
+      ],
+      "confusion": [
+        [
+          0.4,
+          0.5,
+          0.1
+        ],
+        [
+          0,
+          0.8,
+          0.2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  },
+  "nonlocal_graph": {
+    "vertices": 3,
+    "edges": [
+      {
+        "id": "first",
+        "u": 0,
+        "v": 1,
+        "cost": 1,
+        "cells": [
+          0
+        ]
+      },
+      {
+        "id": "second",
+        "u": 1,
+        "v": 2,
+        "cost": 1,
+        "cells": [
+          1
+        ]
+      },
+      {
+        "id": "surveyed",
+        "u": 0,
+        "v": 2,
+        "cost": 3,
+        "cells": []
+      }
+    ]
+  },
+  "external_anticorrelated": {
+    "n": 2,
+    "probabilities": [
+      0,
+      0.5,
+      0.5,
+      0
+    ]
+  },
+  "external_correlated": {
+    "n": 2,
+    "probabilities": [
+      0.8,
+      0,
+      0,
+      0.2
+    ]
+  }
+}
