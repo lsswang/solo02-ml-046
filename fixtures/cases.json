@@ -41,22 +41,42 @@
   },
   "coupling": {
     "before_reading": 2,
-    "after_reading": 1,
-    "threshold": 0.8,
+    "after_reading": 0,
+    "threshold": 0.5,
     "start": 0,
     "goal": 2,
     "prior": {
       "n": 2,
       "class_weights": [
-        1.0
+        0.5,
+        0.5
       ],
       "occupied": [
         [
-          0.5,
-          0.5
+          0.35,
+          0.35
+        ],
+        [
+          0.65,
+          0.65
         ]
       ],
-      "pair_factors": []
+      "pair_factors": [
+        {
+          "i": 0,
+          "j": 1,
+          "values": [
+            [
+              1.0,
+              0.25
+            ],
+            [
+              0.25,
+              1.0
+            ]
+          ]
+        }
+      ]
     },
     "ray": {
       "cells": [
@@ -65,19 +85,19 @@
       ],
       "confusion": [
         [
-          0.4,
-          0.5,
+          0.7,
+          0.2,
           0.1
         ],
         [
-          0,
-          0.8,
+          0.05,
+          0.75,
           0.2
         ],
         [
-          0,
-          0,
-          1
+          0.05,
+          0.15,
+          0.8
         ]
       ]
     }
